@@ -13,7 +13,7 @@ import numpy as np
 from skimage.transform import resize
 warnings.filterwarnings("ignore", category=UserWarning) 
 
-classes = ['battery', 'cardboard', 'clothes', 'glass', 'human', 'metal', 'organic', 'paper', 'plastic', 'shoes']
+classes = ['battery', 'cardboard', 'clothes', 'glass', 'human', 'metal', 'organic', 'paper', 'plastic', 'shoes', 'styrofoam']
 def accuracy(outputs, labels):
     _, preds = torch.max(outputs, dim=1)
     return torch.tensor(torch.sum(preds == labels).item() / len(preds))
